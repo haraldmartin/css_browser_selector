@@ -53,7 +53,7 @@ function css_browser_selector(u)
 		:is('iphone')?m+' iphone'
 		:is('ipod')?m+' ipod'
 		:is('ipad')?m+' ipad'
-		:is('mac')?'mac'
+  	:is('mac')?'mac'+ (/mac os x 10_(\d)_[\d+]/.test(ua) ? ' osx10-' + RegExp.$1 : '' )
 		:is('darwin')?'mac'
 		:is('webtv')?'webtv'
 		/* hat tip: https://github.com/saar/css_browser_selector */
